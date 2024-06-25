@@ -4,12 +4,9 @@
 
 <hr>
 
-<!--<div>-->
-  <%#= details_url(42) %>
-<!--</div>-->
-
 <div>
-  <a href="<%= new_movie_path %>">Add a new movie</a>
+  <!--<a href="<%#= new_movie_path %>">Add a new movie</a>-->
+  <%= link_to "Add a new movie", new_movie_path %>
 </div>
 
 <hr>
@@ -62,9 +59,10 @@
     </td>
 
     <td>
-      <a href="<%= movie_path(a_movie.id) %>">
+      <!--<a href="<%#= movie_path(a_movie.id) %>">
         Show details
-      </a>
+      </a>-->
+      <%= link_to "Show details", movie_path(a_movie) %>
     </td>
   </tr>
   <% end %>
